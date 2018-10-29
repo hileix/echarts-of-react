@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "main": "./index.js",
+  "homepage": "https://github.com/hileix/echarts-of-react",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --open --mode development",
     "build": "./node_modules/.bin/babel ./src/EchartsOfReact.js -o ./index.js"

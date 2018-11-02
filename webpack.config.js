@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 module.exports = {
   entry: './docs/index.js',
@@ -35,6 +37,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, './docs/index.html'),
       filename: path.resolve(__dirname, './docs/dist/index.html')
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ]
 };

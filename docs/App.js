@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import EchartsOfReact from '../index';
+// import EchartsOfReact from '../index';
+// import EchartsOfReactCore from '../src/EchartsOfReactCore';
+import EchartsOfReact from '../src/EchartsOfReact';
+import echarts from 'echarts';
+
 const option = {
   xAxis: {
     type: 'category',
@@ -20,10 +24,18 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        {/* <EchartsOfReactCore
+          id="chart-1"
+          echarts={echarts}
+          defaultWidth={400}
+          defaultHeight={400}
+          option={option}
+        /> */}
         <EchartsOfReact
-          id="my-chart"
-          width={'100%'}
-          height={400}
+          echarts={echarts}
+          id="chart-1"
+          defaultWidth={400}
+          defaultHeight={400}
           option={option}
         />
       </div>

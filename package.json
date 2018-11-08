@@ -2,11 +2,11 @@
   "name": "echarts-of-react",
   "version": "1.0.2",
   "description": "",
-  "main": "./index.js",
+  "main": "./lib/EchartsOfReact.js",
   "homepage": "https://github.com/hileix/echarts-of-react",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --open --mode development --hot",
-    "build": "./node_modules/.bin/babel ./src/EchartsOfReact.js -o ./index.js"
+    "storybook": "./node_modules/.bin/start-storybook -p 9001 -c .storybook",
+    "build": "./node_modules/.bin/babel --presets=@babel/preset-env,@babel/preset-react --plugins=@babel/plugin-proposal-class-properties ./src/ -d ./lib/"
   },
   "keywords": [],
   "author": "hileix <304192604@qq.com> (https://github.com/hileix)",
@@ -17,20 +17,13 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^4.0.4",
     "babel-loader": "^8.0.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
+    "echarts": "^4.2.0-rc.2",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "webpack": "^4.22.0",
-    "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "react-markdown": "^4.0.3"
   },
-  "dependencies": {
-    "echarts": "^4.2.0-rc.2",
-    "prop-types": "^15.6.2"
-  }
+  "dependencies": {}
 }

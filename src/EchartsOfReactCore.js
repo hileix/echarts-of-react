@@ -40,7 +40,7 @@ export default class EChartsOfReact extends React.Component {
     if (!!option) {
       this.chart.setOption(option);
     }
-    // window.addEventListener('resize', this.chartSizeChange);
+    window.addEventListener('resize', this.chartSizeChange);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -50,7 +50,7 @@ export default class EChartsOfReact extends React.Component {
   }
 
   componentWillUnmount() {
-    // window.removeEventListener('resize', this.chartSizeChange);
+    window.removeEventListener('resize', this.chartSizeChange);
   }
 
   chartSizeChange = () => {
